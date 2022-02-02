@@ -1,0 +1,44 @@
+.team--header {
+  overflow: hidden;
+  position: relative;
+}
+
+.team--bg {
+  opacity: 0.4;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+
+.team--card {
+  background: #3a42ff;
+  border-radius: 15px;
+}
+
+.team--card h2 {
+  margin-bottom: 20px;
+}
+
+.team--info p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.team--logo {
+  position: relative;
+}
+
+.team--logo img {
+  max-width: 240px;
+}
+
+.team--links ul {
+  list-style: none;
+}
+
+.team--links ul li {
+  display: inline-block;
+  margin: 0 10px;
+}

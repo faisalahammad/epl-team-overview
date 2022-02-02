@@ -9,7 +9,6 @@ const Home = () => {
     fetch(url)
       .then(res => res.json())
       .then(data => setTeams(data.teams))
-      // .then(data => console.log(data.teams))
   }, [])
   return (
     <div className='home py-5'>

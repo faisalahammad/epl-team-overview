@@ -5,6 +5,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import PointsTable from './components/PointsTable/PointsTable';
+import Team from './components/Team/Team';
 import './style.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path='/home' element={<Home />} />
           <Route path='/teams' element={<Home />} />
           <Route path='/table' element={<PointsTable />} />
+          <Route path='/team/:id' element={<Team />} />
         </Routes>
       </section>
       <Footer></Footer>

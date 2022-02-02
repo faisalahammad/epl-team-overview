@@ -4,7 +4,7 @@ import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 
 const TeamCard = (props) => {
-  const { strTeam, strTeamBadge, strSport} = props.team;
+  const { idTeam, strTeam, strTeamBadge, strSport} = props.team;
   return (
     <Col>
       <Card className='text-center pt-5 pb-3'>
@@ -14,7 +14,7 @@ const TeamCard = (props) => {
           <Card.Text>
             Sports: { strSport }
           </Card.Text>
-          <a href={`/${strTeam}`} className='btn btn-primary'>Explore <FontAwesomeIcon icon={faLongArrowAltRight} /></a>
+          <a href={`/team/${idTeam}`} className='btn btn-primary'>Explore <FontAwesomeIcon icon={faLongArrowAltRight} /></a>
         </Card.Body>
       </Card>
     </Col>
