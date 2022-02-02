@@ -22,6 +22,7 @@ const PointsTable = () => {
               <tr>
                 <th>#</th>
                 <th>Team</th>
+                <th>Form</th>
                 <th>P</th>
                 <th>W</th>
                 <th>L</th>
@@ -29,7 +30,6 @@ const PointsTable = () => {
                 <th>GA</th>
                 <th>GC</th>
                 <th>GD</th>
-                <th>Form</th>
                 <th>PO</th>
               </tr>
             </thead>

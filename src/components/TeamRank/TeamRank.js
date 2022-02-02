@@ -13,11 +13,14 @@ const TeamRank = (props) => {
   const promotionStyle = {
     borderLeft: `3px solid ${promotionColor}`
   }
+  const recentForm = strForm.split('').join('-');
+
   return (
     <>
       <tr>
         <td style={promotionStyle}>{ intRank }</td>
         <td>{ strTeam }</td>
+        <td>{ recentForm }</td>
         <td>{ intPlayed }</td>
         <td>{ intWin }</td>
         <td>{ intLoss }</td>
@@ -25,7 +28,6 @@ const TeamRank = (props) => {
         <td>{ intGoalsFor }</td>
         <td>{ intGoalsAgainst }</td>
         <td>{ intGoalDifference }</td>
-        <td>{ strForm }</td>
         <td>{ intPoints }</td>
       </tr>
     </>
