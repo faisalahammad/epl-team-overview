@@ -16,35 +16,37 @@ const PointsTable = () => {
     <div className='points-table py-5 text-light'>
       <div className="container">
         <div className="row">
-          <h2>Points Table of {season}</h2>
-          <Table striped bordered hover variant='dark' className='mt-3'>
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Team</th>
-                <th>Form</th>
-                <th>P</th>
-                <th>W</th>
-                <th>L</th>
-                <th>D</th>
-                <th>GA</th>
-                <th>GC</th>
-                <th>GD</th>
-                <th>PO</th>
-              </tr>
-            </thead>
-            <tbody>
-              {
-                teams.map(team => <TeamRank team={team} key={team.idTeam} />)
-              }
-            </tbody>
-          </Table>
+          <div className="col-md-12 col-xs-12">
+            <h2>Points Table of {season}</h2>
+            <Table striped bordered hover variant='dark' className='mt-3'>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Team</th>
+                  <th>Form</th>
+                  <th>P</th>
+                  <th>W</th>
+                  <th>L</th>
+                  <th>D</th>
+                  <th>GA</th>
+                  <th>GC</th>
+                  <th>GD</th>
+                  <th>PO</th>
+                </tr>
+              </thead>
+              <tbody>
+                {
+                  teams.map(team => <TeamRank team={team} key={team.idTeam} />)
+                }
+              </tbody>
+            </Table>
 
-          <div className="promotion mt-3">
-            <h4>Season end promotion:</h4>
-            <Badge pill bg='success'>Champions League</Badge>
-            <Badge pill bg='primary'>Euro League</Badge>
-            <Badge pill bg='danger'>Relegation</Badge>
+            <div className="promotion mt-3">
+              <h4>Season end promotion:</h4>
+              <Badge pill bg='success'>Champions League</Badge>
+              <Badge pill bg='primary'>Euro League</Badge>
+              <Badge pill bg='danger'>Relegation</Badge>
+            </div>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { faFacebook, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faInstagram, faTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faFlag, faFutbol, faGlobe, faMapMarkerAlt, faMars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
@@ -19,9 +19,6 @@ const Team = () => {
   }, [])
 
   const currentTeam = teams.filter(team => team.idTeam === id);
-  // const {strStadiumThumb, strTeamBadge} = currentTeam[0];
-  // console.log(currentTeam[0]);
-  // console.log(currentTeam);
 
   return (
     <div className='team text-light'>
@@ -33,8 +30,8 @@ const Team = () => {
       </div>
 
       <div className="container py-5">
-        <div className="row team--card py-5 px-2">
-          <div className="col-md-8 col-sm-6">
+        <div className="row team--card py-5 px-3">
+          <div className="col-lg-8 col-md-5 col-sm-12">
             <h2>{ currentTeam[0]?.strTeam }</h2>
             <div className="team--info">
               <p><FontAwesomeIcon icon={faMapMarkerAlt}/> Founded: { currentTeam[0]?.intFormedYear }</p>
@@ -43,8 +40,8 @@ const Team = () => {
               <p><FontAwesomeIcon icon={faMars}/> Gender: { currentTeam[0]?.strGender }</p>
             </div>
           </div>
-          <div className="col-md-4 col-sm-6">
-            <img src={currentTeam[0]?.strTeamBanner} alt={`${currentTeam[0]?.strTeam } banner`} className='img-fluid' />
+          <div className="col-lg-4 col-md-7 col-sm-12">
+            <img src={currentTeam[0]?.strTeamFanart4} alt={`${currentTeam[0]?.strTeam } banner`} className='img-fluid' />
           </div>
         </div>
 
@@ -53,14 +50,35 @@ const Team = () => {
           <p>{ currentTeam[0]?.strDescriptionEN}</p>
         </div>
 
-        <div className="row mt-3">
+        <div className="row mt-4">
           <div className="team--links text-center">
             <h3>Follow Us</h3>
-            <ul className="mt-2">
-              <li><a href={`https://${currentTeam[0]?.strTwitter}`}><FontAwesomeIcon icon={faTwitter} size="3x"/></a></li>
-              <li><a href={`https://${currentTeam[0]?.strFacebook}`}><FontAwesomeIcon icon={faFacebook} size="3x"/></a></li>
-              <li><a href={`https://${currentTeam[0]?.strInstagram}`}><FontAwesomeIcon icon={faInstagram} size="3x"/></a></li>
-              <li><a href={`https://${currentTeam[0]?.strWebsite}`}><FontAwesomeIcon icon={faGlobe} size="3x"/></a></li>
+            <ul className="mt-3">
+              <li>
+                <a href={`https://${currentTeam[0]?.strTwitter}`} target='_blank' rel='noopener noreferrer'>
+                <FontAwesomeIcon icon={faTwitter} size="3x"/>
+                </a>
+              </li>
+              <li>
+                <a href={`https://${currentTeam[0]?.strFacebook}`} target='_blank' rel='noopener noreferrer'>
+                <FontAwesomeIcon icon={faFacebook} size="3x"/>
+                </a>
+              </li>
+              <li>
+                <a href={`https://${currentTeam[0]?.strInstagram}`} target='_blank' rel='noopener noreferrer'>
+                <FontAwesomeIcon icon={faInstagram} size="3x"/>
+                </a>
+              </li>
+              <li>
+                <a href={`https://${currentTeam[0]?.strYoutube}`} target='_blank' rel='noopener noreferrer'>
+                <FontAwesomeIcon icon={faYoutube} size="3x"/>
+                </a>
+              </li>
+              <li>
+                <a href={`https://${currentTeam[0]?.strWebsite}`} target='_blank' rel='noopener noreferrer'>
+                <FontAwesomeIcon icon={faGlobe} size="3x"/>
+                </a>
+              </li>
             </ul>
           </div>
         </div>

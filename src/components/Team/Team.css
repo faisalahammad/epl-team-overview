@@ -42,3 +42,22 @@
   display: inline-block;
   margin: 0 10px;
 }
+
+.team--info p svg {
+  margin-right: 5px;
+}
+
+@media (max-width: 767px) {
+  .team--info {
+    margin-bottom: 30px;
+  }
+  .team--logo img {
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 360px) {
+  .team--logo img {
+    max-width: 90px;
+  }
+}
