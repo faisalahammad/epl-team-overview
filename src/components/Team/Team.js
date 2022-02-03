@@ -55,27 +55,27 @@ const Team = () => {
             <h3>Follow Us</h3>
             <ul className="mt-3">
               <li>
-                <a href={`https://${currentTeam[0]?.strTwitter}`} target='_blank' rel='noopener noreferrer'>
-                <FontAwesomeIcon icon={faTwitter} size="3x"/>
-                </a>
-              </li>
-              <li>
-                <a href={`https://${currentTeam[0]?.strFacebook}`} target='_blank' rel='noopener noreferrer'>
+                <a href={`https://${currentTeam[0]?.strFacebook}`} target='_blank' rel='noopener noreferrer' className="text-primary">
                 <FontAwesomeIcon icon={faFacebook} size="3x"/>
                 </a>
               </li>
               <li>
-                <a href={`https://${currentTeam[0]?.strInstagram}`} target='_blank' rel='noopener noreferrer'>
+                <a href={`https://${currentTeam[0]?.strTwitter}`} target='_blank' rel='noopener noreferrer' className="text-primary">
+                <FontAwesomeIcon icon={faTwitter} size="3x"/>
+                </a>
+              </li>
+              <li>
+                <a href={`https://${currentTeam[0]?.strInstagram}`} target='_blank' rel='noopener noreferrer' className="text-warning">
                 <FontAwesomeIcon icon={faInstagram} size="3x"/>
                 </a>
               </li>
               <li>
-                <a href={`https://${currentTeam[0]?.strYoutube}`} target='_blank' rel='noopener noreferrer'>
+                <a href={`https://${currentTeam[0]?.strYoutube}`} target='_blank' rel='noopener noreferrer' className="text-danger">
                 <FontAwesomeIcon icon={faYoutube} size="3x"/>
                 </a>
               </li>
               <li>
-                <a href={`https://${currentTeam[0]?.strWebsite}`} target='_blank' rel='noopener noreferrer'>
+                <a href={`https://${currentTeam[0]?.strWebsite}`} target='_blank' rel='noopener noreferrer' className="text-info">
                 <FontAwesomeIcon icon={faGlobe} size="3x"/>
                 </a>
               </li>

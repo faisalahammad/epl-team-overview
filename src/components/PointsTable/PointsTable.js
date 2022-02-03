@@ -4,9 +4,9 @@ import TeamRank from '../TeamRank/TeamRank';
 
 const PointsTable = () => {
   const [teams, setTeams] = useState([]);
-  const season = '2021-2022';
+  const currentYear = new Date().getFullYear();
   useEffect(() => {
-    const url = `https://www.thesportsdb.com/api/v1/json/2/lookuptable.php?l=4328&s=${season}`;
+    const url = `https://www.thesportsdb.com/api/v1/json/2/lookuptable.php?l=4328&s=${currentYear-1}-${currentYear}`;
     fetch(url)
       .then(res => res.json())
       .then(data => setTeams(data.table))
@@ -17,8 +17,8 @@ const PointsTable = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-12 col-xs-12">
-            <h2>Points Table of {season}</h2>
-            <Table striped bordered hover variant='dark' className='mt-3'>
+            <h2>Points Table of {`${currentYear-1}-${currentYear}`}</h2>
+            <Table striped bordered hover variant='dark' className='mt-4'>
               <thead>
                 <tr>
                   <th>#</th>
