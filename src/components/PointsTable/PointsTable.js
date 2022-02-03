@@ -10,7 +10,7 @@ const PointsTable = () => {
     fetch(url)
       .then(res => res.json())
       .then(data => setTeams(data.table))
-  }, [])
+  }, [currentYear])
 
   return (
     <div className='points-table py-5 text-light'>
